@@ -1,5 +1,5 @@
 <?php
-$host = '127.0.0.1';
+$host = 'localhost:3307';
 $db   = 'test';
 $user = 'root';
 $pass = '';
@@ -14,10 +14,10 @@ $options = [
 try 
 {
      $pdo = new PDO($dsn, $user, $pass, $options);
+     echo "Connectie gemaakt!";
 } 
 catch (\PDOException $e) 
 {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-"Connected to database (db_name)."
 ?>
